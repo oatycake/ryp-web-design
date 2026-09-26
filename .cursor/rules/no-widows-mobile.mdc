@@ -1,0 +1,16 @@
+---
+description: Avoid typographic widows on mobile layouts
+alwaysApply: true
+---
+
+# No widows on mobile
+
+When writing or editing visible UI copy (headlines, subheads, body, footers):
+
+- Do **not** leave a single short word alone on the last line of a block on narrow viewports.
+- Prefer, in order:
+  1. Intentional line breaks for paired headlines (`Clear screens` / `Careful craft`)
+  2. Non-breaking spaces (`\u00A0`) before short trailing words (`at home`, `& more`, `a storefront`)
+  3. Tailwind `text-pretty` on paragraphs and `text-balance` on display headings
+- Check the result at a phone width (~375px) before calling the edit done.
+- Apply this whenever optimizing or adding copy — not only when the user mentions widows.

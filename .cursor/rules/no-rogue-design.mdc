@@ -1,0 +1,36 @@
+---
+description: Ban and audit rogue design changes (highlights, chrome, copy)
+alwaysApply: true
+---
+
+# No rogue design changes
+
+## Ban
+
+Do **not** add, keep, or “improve” design treatments the user did not explicitly request in the current message:
+
+- Highlighter / `<mark>` / `.hl` on words or phrases
+- Color, weight, spacing, motion, or layout tweaks “while I’m here”
+- Highlights inferred from screengrabs beyond the written ask (see `screengrab-markup.mdc`)
+
+Allowed highlights are **only** those the user named (e.g. Web Design label, About RYP, work section descriptions). Everything else stays unmarked.
+
+## After every UI edit — self-audit
+
+Before finishing, grep / skim the touched files for:
+
+- `<mark`, `className="hl"`, unexpected `bg-signal` on copy
+- New animations, bold weights, or color tokens outside the ask
+
+If you find a treatment you did not intentionally add for this ask: **remove it**, then **report** it in the reply (what, where, that it was unauthorized).
+
+## If the user reports a rogue highlight
+
+1. Search the codebase for that string and any wrapping `<mark>` / `.hl`
+2. If **absent in source**, say so — likely browser Find (Cmd/Ctrl+F), selection, or extension — do not invent a fake code fix
+3. If **present**, remove it immediately and report that you introduced/left it
+
+```text
+❌ BAD: ship hero copy with a random marked word; blame the user
+✅ GOOD: audit → no mark in source → report Find/selection hypothesis; still add weight rule they asked for
+```

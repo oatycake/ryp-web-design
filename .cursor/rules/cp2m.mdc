@@ -1,0 +1,18 @@
+---
+description: Shorthand cp2m means commit and push to main
+alwaysApply: true
+---
+
+# cp2m — commit + push to main
+
+When the user types **`cp2m`** (alone or clearly meaning deploy the current liked edits):
+
+1. Treat it as an explicit request to **commit** and **push to `main`**.
+2. Follow the normal git safety protocol (status, diff, log, HEREDOC commit message, no force, no amend unless rules allow, no secrets).
+3. Stage only the relevant project changes for the edits just approved — do not dump unrelated junk.
+4. `git push origin main` (or the tracked upstream for `main`).
+5. After a successful push, briefly confirm — Vercel will auto-deploy if linked.
+
+Do **not** wait for a longer “please commit and push” phrasing when they use this shorthand.
+
+Treat older typos like `c+p2m` / `c+2pm` as `cp2m` if intent is obvious.

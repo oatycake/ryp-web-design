@@ -1,0 +1,22 @@
+---
+description: Don't over-infer design from screengrabs — prose wins
+alwaysApply: true
+---
+
+# Screengrab markup — don't over-apply
+
+When the user shares screengrabs as markup or reference:
+
+1. **Prose wins.** Only implement what the written message explicitly asks for. Images support or illustrate that ask — they are not a license to change every element that appears in the frame.
+2. **Don't generalize yellow (or other) marks across the page.** If they say “highlighter on WEB DESIGN,” do that only. Do **not** also highlight captions, notes, descriptions, or other lines that happen to look yellow in the same batch of grabs.
+3. **One grab ≠ whole-site pattern.** A grab of a work-card note or section blurb may be teaching spacing, indent, or “look here” — not “paint every note/description this way.” Ask if unclear.
+4. **Don't invent explanations that blame the user.** Never claim accidental text selection, mis-clicks, or “you didn't mean it” unless they say so. If you over-applied, own the inference error.
+5. **When markup and memory conflict, stop and confirm** one pointed question — don't ship a speculative full-pass of highlights, spacing, or chrome.
+
+```text
+❌ BAD: 4 grabs show yellow on logo label + about + section blurb + card note
+        → highlight all four site-wide
+
+✅ GOOD: message says “nbsp + highlighter on WEB DESIGN”
+        → only that; ask before touching other yellow-looking regions
+```
