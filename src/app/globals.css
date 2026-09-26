@@ -209,11 +209,6 @@ a {
     text-pulse 2.4s ease-in-out infinite;
 }
 
-/* Gem gallery — slower, no pulse: catalog drift, not carnival */
-.hero-marquee--gem {
-  animation: marquee 48s linear infinite;
-}
-
 .btn-ink {
   display: inline-flex;
   align-items: center;
@@ -234,8 +229,7 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-marquee,
-  .hero-marquee--gem {
+  .hero-marquee {
     animation: none;
   }
   .anim-rise,
